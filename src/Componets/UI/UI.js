@@ -6,17 +6,9 @@ import './Ui.css'
 const Ui = (pros) => {
   return (
     <Fragment >
-      <div className="">
+      <div className="Warrper">
         <Chat />
         <Search />
-
-
-
-
-
-
-
-
       </div>
 
     </Fragment>

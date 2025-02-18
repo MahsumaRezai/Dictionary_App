@@ -1,0 +1,8 @@
+.Warrper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    border-top: 4px solid orangered
+   
+}

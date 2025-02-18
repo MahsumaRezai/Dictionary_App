@@ -4,9 +4,9 @@ const Chat = (props) => {
     return (
         <Fragment>
             <div className="all">
-                <div>Chat</div>
-                <div>View</div>
-                <div>Claer Chats</div>
+                <div className="chat">Chat</div>
+                <div className="view">View</div>
+                <div className="drop">Claer Chats</div>
 
             </div>
 
