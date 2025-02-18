@@ -9,10 +9,6 @@ const App = (props) => {
 
             <h1>hello </h1>
 
-
-
-
-
         </Fragment>
     );
 };
