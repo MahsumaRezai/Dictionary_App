@@ -1,8 +1,5 @@
 
-import { Fragment } from 'react';
-
-
-
+import { Fragment } from 'react'
 const App = (props) => {
     return (
         <Fragment>
