@@ -1,9 +1,13 @@
-import { Fragment } from 'react'
+import { Fragment } from 'react';
+import './Chat.css'
 const Chat = (props) => {
     return (
         <Fragment>
-            <div>
-                <div></div>
+            <div className="all">
+                <div>Chat</div>
+                <div>View</div>
+                <div>Claer Chats</div>
+
             </div>
 
 
@@ -12,3 +16,4 @@ const Chat = (props) => {
 
     )
 }
+export default Chat
