@@ -1,0 +1,7 @@
+
+.App footer {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 5px 0;
+    color: var(--text-color);
+  }
