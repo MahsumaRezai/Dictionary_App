@@ -9,11 +9,11 @@
 body {
   margin: 0;
   font-family: var(--font-family);
-  background-image: url("/src/images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background: ghostwhite
 }
 
 a {
