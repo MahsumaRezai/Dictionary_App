@@ -1,3 +1,4 @@
+/* استایل های عمومی برای .App */
 .App {
   display: flex;
   flex-direction: column;
@@ -5,7 +6,8 @@
   justify-content: center;
   min-height: 100vh;
   text-align: center;
-}  
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 .App h1 {
   font-size: 3rem;
@@ -33,4 +35,42 @@
   font-weight: 500;
   margin: 5px 0;
   color: var(--text-color);
+}
+
+/* حالت روشن */
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.light-mode .toggle-button {
+  background-color: black;
+  color: white;
+}
+
+/* حالت دارک مود */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode .toggle-button {
+  background-color: white;
+  color: black;
+}
+
+/* استایل برای دکمه تغییر حالت */
+.toggle-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.toggle-button:hover {
+  background-color: #0056b3;
 }

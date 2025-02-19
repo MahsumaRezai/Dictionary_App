@@ -59,7 +59,7 @@ const Dictionary = ({ defaultKeyword }) => {
   return (
     <div className="Dictionary">
       <section>
-        <div className="subheading">What word piques your interest?</div>
+        <div className="subheading">Search the words</div>
         <form onSubmit={handleSubmit}>
           <input
             className="search"
