@@ -4,7 +4,7 @@ import Photos from "./Photos";
 import PropTypes from "prop-types";
 import "../styles/Dictionary.css";
 
-const Dictionary = ({ defaultKeyword }) => {
+const Dictionary = ({ defaultKeyword, onSaveChat }) => {
   const [keyword, setKeyword] = useState(defaultKeyword);
   const [results, setResults] = useState(null);
   const [photos, setPhotos] = useState(null);
@@ -45,6 +45,8 @@ const Dictionary = ({ defaultKeyword }) => {
 
   const handleDictionaryResponse = (data) => {
     setResults(data[0]);
+    // ذخیره لغت جستجو شده
+    onSaveChat(keyword); // فراخوانی تابع ذخیره لغت
   };
 
   const handleKeywordChange = (event) => {
@@ -82,6 +84,7 @@ const Dictionary = ({ defaultKeyword }) => {
 
 Dictionary.propTypes = {
   defaultKeyword: PropTypes.string.isRequired,
+  onSaveChat: PropTypes.func.isRequired, // اضافه کردن نوع تابع
 };
 
 export default Dictionary;
