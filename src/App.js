@@ -1,50 +1,45 @@
-import React, { useState } from 'react';
-import List from './Componets/UI/List.js';
-import Form from './Componets/UI/Form.js';
-import './App.css';
+import React from "react";
+import Dictionary from "./components/Dictionary";
+import "./App.css";
 
-const App = () => {
-  const [courseGoals, setCourseGoals] = useState([
-    { text: 'Do all exercises!', id: 'g1' },
-    { text: 'Finish the course!', id: 'g2' }
-  ]);
-
-  const addGoalHandler = enteredText => {
-    setCourseGoals(prevGoals => {
-      const updatedGoals = [...prevGoals];
-      updatedGoals.unshift({ text: enteredText, id: Math.random().toString() });
-      return updatedGoals;
-    });
-  };
-
-  const deleteItemHandler = goalId => {
-    setCourseGoals(prevGoals => {
-      const updatedGoals = prevGoals.filter(goal => goal.id !== goalId);
-      return updatedGoals;
-    });
-  };
-
-  let content = (
-    <p style={{ textAlign: 'center' }}>No goals found. Maybe add one?</p>
-  );
-
-  if (courseGoals.length > 0) {
-    content = (
-      <List items={courseGoals} onDeleteItem={deleteItemHandler} />
-    );
-  }
-
+function App() {
   return (
-    <div>
-      <section id="goal-form">
-        <Form onAddGoal={addGoalHandler} />
-      </section>
-      <section id="goals">
-        {content}
-
-      </section>
+    <div className="App">
+      <div className="container">
+        <header className="App-header">
+          <h1 className="heading">Dictionary</h1>
+        </header>
+        <main>
+          <Dictionary defaultKeyword="aesthetic" />
+        </main>
+        <footer className="mt-5 footer">
+          <div className="footer-content">
+            <p className="credit">
+              Coded by{" "}
+              <a
+                href="https://github.com/s-shemmee"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-link"
+              >
+                s-shemmee
+              </a>
+              ,{" "}
+              <a
+                href="https://github.com/shemmee/Dictionary-React-App"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-link"
+              >
+                Open sourced on Github
+              </a>
+              . Hosted on Vercel
+            </p>
+          </div>
+        </footer>
+      </div>
     </div>
   );
-};
+}
 
 export default App;
