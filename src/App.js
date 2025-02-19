@@ -22,7 +22,8 @@ function App() {
                 rel="noopener noreferrer"
                 className="footer-link"
               >
-                s-shemmee
+              Masoumeh Nowrozi
+          
               </a>
               ,{" "}
               <a
@@ -31,9 +32,9 @@ function App() {
                 rel="noopener noreferrer"
                 className="footer-link"
               >
-                Open sourced on Github
+               
               </a>
-              . Hosted on Vercel
+           
             </p>
           </div>
         </footer>
