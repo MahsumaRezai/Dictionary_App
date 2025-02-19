@@ -15,7 +15,7 @@ function App() {
       <div className="container">
         <header className="App-header">
           <h1 className="heading">Dictionary</h1>
-          {/* دکمه برای تغییر حالت */}
+          {/* دکمه برای تغییر حالت در بالا سمت راست */}
           <button className="toggle-button" onClick={toggleDarkMode}>
             {isDarkMode ? "Light Mode" : "Dark Mode"}
           </button>
