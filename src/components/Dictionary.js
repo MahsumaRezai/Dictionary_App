@@ -4,7 +4,7 @@ import Photos from "./Photos";
 import PropTypes from "prop-types";
 import "../styles/Dictionary.css";
 
-const Dictionary = ({ defaultKeyword, onSaveChat }) => {
+const Dictionary = ({ defaultKeyword }) => {
   const [keyword, setKeyword] = useState(defaultKeyword);
   const [results, setResults] = useState(null);
   const [photos, setPhotos] = useState(null);
@@ -16,8 +16,6 @@ const Dictionary = ({ defaultKeyword, onSaveChat }) => {
       const pexelsApiKey = process.env.REACT_APP_PEXELS_API_KEY;
       const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
       const pexelsApiHeaders = { Authorization: pexelsApiKey };
-
-      // استفاده از fetch به جای axios
       fetch(dictionaryApiUrl)
         .then((response) => response.json())
         .then(handleDictionaryResponse)
@@ -45,8 +43,6 @@ const Dictionary = ({ defaultKeyword, onSaveChat }) => {
 
   const handleDictionaryResponse = (data) => {
     setResults(data[0]);
-    // ذخیره لغت جستجو شده
-    onSaveChat(keyword); // فراخوانی تابع ذخیره لغت
   };
 
   const handleKeywordChange = (event) => {
@@ -84,7 +80,6 @@ const Dictionary = ({ defaultKeyword, onSaveChat }) => {
 
 Dictionary.propTypes = {
   defaultKeyword: PropTypes.string.isRequired,
-  onSaveChat: PropTypes.func.isRequired, // اضافه کردن نوع تابع
 };
 
 export default Dictionary;
