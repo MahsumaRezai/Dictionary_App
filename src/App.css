@@ -1,4 +1,4 @@
-/* استایل های عمومی برای .App */
+
 .App {
   display: flex;
   flex-direction: column;
@@ -6,7 +6,7 @@
   justify-content: center;
   min-height: 100vh;
   text-align: center;
-  position: relative; /* برای قرار دادن دکمه در موقعیت درست */
+  position: relative; 
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -38,7 +38,7 @@
   color: var(--text-color);
 }
 
-/* حالت روشن */
+
 .light-mode {
   background-color: white;
   color: black;
@@ -49,10 +49,10 @@
   color: white;
 }
 
-/* حالت دارک مود */
+
 .dark-mode {
   background-color: black;
-  color: white;
+  color: #277047;
 }
 
 .dark-mode .toggle-button {
@@ -60,7 +60,6 @@
   color: black;
 }
 
-/* استایل برای دکمه تغییر حالت */
 .toggle-button {
   padding: 10px 20px;
   font-size: 16px;
@@ -69,9 +68,9 @@
   color: white;
   border: none;
   border-radius: 5px;
-  position: absolute; /* برای قرار دادن دکمه در بالای صفحه */
-  top: 20px; /* فاصله از بالای صفحه */
-  right: 20px; /* فاصله از سمت راست صفحه */
+  position: absolute;
+  top: 20px;
+  right: 20px; 
 }
 
 .toggle-button:hover {

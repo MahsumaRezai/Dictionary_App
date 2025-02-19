@@ -30,7 +30,7 @@ function App() {
               <a
                 href="https://github.com/MahsumaRezai"
                 target="_blank"
-                rel="noopener noreferrer"
+              
                 className="footer-link"
               >
                 Masoumeh Nowrozi
@@ -39,7 +39,6 @@ function App() {
               <a
                 href="https://github.com/MahsumaRezai"
                 target="_blank"
-                rel="noopener noreferrer"
                 className="footer-link"
               >
               </a>
