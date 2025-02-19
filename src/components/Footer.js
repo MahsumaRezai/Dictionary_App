@@ -1,4 +1,5 @@
-import { Fragment } from 'react'
+import { Fragment } from 'react';
+import '../styles/Footer.css'
 const Footer = (props) => {
     return (
         <Fragment>
@@ -13,7 +14,7 @@ const Footer = (props) => {
                             className="footer-link"
                         >
                             Masoumeh Nowrozi
-              </a>
+                                     </a>
                         {" "}
                         <a
                             href="https://github.com/MahsumaRezai"
