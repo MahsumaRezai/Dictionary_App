@@ -5,3 +5,8 @@
     margin: 5px 0;
     color: var(--text-color);
   }
+   .chat {
+     width: 200px;
+     height: 20px;
+     background: red;
+   }

@@ -1,21 +1,19 @@
-// App.js
 import React, { useState, useEffect } from "react";
 import Dictionary from "./components/Dictionary";
-import "./App.css";
 import Footer from "./components/Footer";
-import LoadingSpinner from "./components/LoadingSpinner"; 
+import LoadingSpinner from "./components/LoadingSpinner";
+import "./App.css";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
 
   useEffect(() => {
-   
     setTimeout(() => {
-      setLoading(false); 
+      setLoading(false);
     }, 3000);
   }, []);
 
@@ -27,6 +25,7 @@ function App() {
           <button className="toggle-button" onClick={toggleDarkMode}>
             {isDarkMode ? "Light Mode" : "Dark Mode"}
           </button>
+          <button className="hello-button">hello</button>
         </header>
         <main>
           {loading ? (
