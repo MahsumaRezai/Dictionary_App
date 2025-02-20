@@ -4,7 +4,7 @@
   margin-bottom: 25px;
   padding: 20px;
   border-radius: 30px;
-  outline: 2px solid #A43AFF;
+  outline: 2px solid #6F00FF;
   outline-offset: -10px;
   background-color: ghostwhite;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -22,7 +22,7 @@
   width: 100%;
   max-width: 500px;
   height: 40px;
-  border: 2px solid #A43AFF ;
+  border: 2px solid #6F00FF ;
   border-radius: 20px;
   background-color:#f2f9f1;
   padding: 0 15px;
@@ -42,7 +42,7 @@
   margin-top: 10px;
   border-radius: 20px;
   border: none;
-  background-color: #A43AFF;
+  background-color: #6F00FF;
   color: #fff;
   cursor: pointer;
 }
