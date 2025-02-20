@@ -69,7 +69,6 @@ const Dictionary = ({ defaultKeyword }) => {
           <input type="submit" value="Search" className="search-button" />
         </form>
         <div className="suggestions">
-          Suggested concepts: cat, tree, code, sun...
         </div>
       </section>
       {results && <Results results={results} />}
