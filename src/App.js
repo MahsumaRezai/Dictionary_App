@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 import LoadingSpinner from "./components/LoadingSpinner";
 import "./App.css";
 import Chats from "./components/Chat";
-
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [loading, setLoading] = useState(true);

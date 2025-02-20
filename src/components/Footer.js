@@ -16,7 +16,7 @@ const Footer = (props) => {
               </a>
                         {" "}
                         <a
-                            href="https://github.com/MahsumaRezai"
+                            href="https://github.com/MahsumaRezai/Dictionary_App"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="footer-link"

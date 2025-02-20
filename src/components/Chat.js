@@ -29,9 +29,6 @@ const Chats = (props) => {
                 <button className="btn" onClick={props.onClose}>Close</button>
                 <button className="btn-remve" onClick={clearSearchHistory}>Clear History</button>
             </div>
-
-
-
         </div>
     );
 };
