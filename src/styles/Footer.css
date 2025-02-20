@@ -3,7 +3,7 @@
     font-size: 1rem;
     font-weight: 500;
     margin: 5px 0;
-    color: var(--text-color);
+    color: black;
   }
   .Chats {
     padding: 20px;
@@ -12,11 +12,13 @@
     margin-bottom: 25px;
     padding: 20px;
     border-radius: 30px;
-    outline: 2px solid var(--primary-color);
     outline-offset: -10px;
-    background-color: var(--background-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+   outline: 2px solid #A43AFF;
+   background-color: ghostwhite;
+
+
   }
   
   h2 {
@@ -27,6 +29,9 @@
   ul {
     list-style-type: none;
     padding-left: 0;
+    font-size:18px;
+    font-weight: bold
+    
   }
   
   li {
@@ -36,16 +41,19 @@
   
   p {
     font-style: italic;
-    color: #888;
+    color: #A43AFF;
   }
   .btn  {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 10px 30px;
+  font-size: 17px;
   cursor: pointer;
-  background-color:#277047;
-  color: white;
+  background-color:#A43AFF;
+  color: black;
   border: none;
   border-radius: 5px;
  
+  }
+  .footer-link {
+    color: #A43AFF
   }
   

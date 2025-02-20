@@ -16,7 +16,7 @@
   margin: 30px 0;
   letter-spacing: 3px;
   -webkit-text-stroke: 2px var(--background-color);
-  color: var(--primary-color);
+  color: #A43AFF;
 }
 
 @media (min-width: 768px) {
@@ -39,10 +39,8 @@
 }
 
 .light-mode {
- 
+
   background-color: white;
-  
-  
   color: black;
 }
 
@@ -54,7 +52,7 @@
 
 .dark-mode {
   background-color: #171717;
-  color: #277047;
+  color: #171717;
 
 }
 
@@ -77,7 +75,7 @@
 }
 
 .toggle-button:hover {
-  background-color: #0056b3;
+  background-color: #A43AFF;
 }
 .hello-button {
   padding: 10px 20px;
@@ -94,7 +92,7 @@
 }
 
 .hello-button:hover {
-  background-color: #218838;
+  background-color: #EFCCFF;
 }
 
 

@@ -46,7 +46,7 @@ function App() {
               <Dictionary defaultKeyword="aesthetic" />
             )}
         </main>
-        
+
         <Footer />
       </div>
     </div>

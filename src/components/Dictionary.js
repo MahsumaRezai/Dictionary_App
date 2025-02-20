@@ -33,7 +33,7 @@ const Dictionary = ({ defaultKeyword }) => {
 
     if (keyword) {
       search();
-      // ذخیره‌سازی لغت جستجو شده در localStorage
+    
       const searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
       if (!searchHistory.includes(keyword)) {
         searchHistory.push(keyword);
