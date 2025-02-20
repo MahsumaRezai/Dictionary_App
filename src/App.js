@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+// App.js
+import React, { useState, useEffect } from "react";
 import Dictionary from "./components/Dictionary";
 import "./App.css";
 import Footer from "./components/Footer";
+import LoadingSpinner from "./components/LoadingSpinner"; 
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-
+  const [loading, setLoading] = useState(true); 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
+
+  useEffect(() => {
+   
+    setTimeout(() => {
+      setLoading(false); 
+    }, 3000);
+  }, []);
 
   return (
     <div className={isDarkMode ? "App dark-mode" : "App light-mode"}>
@@ -20,9 +29,13 @@ function App() {
           </button>
         </header>
         <main>
-          <Dictionary defaultKeyword="aesthetic" />
+          {loading ? (
+            <LoadingSpinner />
+          ) : (
+              <Dictionary defaultKeyword="aesthetic" />
+            )}
         </main>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );
