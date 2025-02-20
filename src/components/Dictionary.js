@@ -69,7 +69,7 @@ const Dictionary = ({ defaultKeyword }) => {
             type="search"
             name="keyword"
             onChange={handleKeywordChange}
-            placeholder={defaultKeyword}
+            placeholder="Type a Word"
           />
           <input type="submit" value="Search" className="search-button" />
         </form>
