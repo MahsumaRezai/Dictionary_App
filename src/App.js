@@ -14,8 +14,12 @@ function App() {
     setIsDarkMode(!isDarkMode);
   };
 
-  const hanlderCart = () => {
+  const showHanlderCart = () => {
     setIsCart(true)
+  }
+
+  const closeHanlderCart = () => {
+    setIsCart(false)
   }
 
   useEffect(() => {
@@ -32,8 +36,8 @@ function App() {
           <button className="toggle-button" onClick={toggleDarkMode}>
             {isDarkMode ? "Light Mode" : "Dark Mode"}
           </button>
-          {isCart && <Chats />}
-          <button className="hello-button" onClick={hanlderCart}>Chats</button>
+          {isCart && <Chats onClose={closeHanlderCart} />}
+          <button className="hello-button" onClick={showHanlderCart}>Chats</button>
         </header>
         <main>
           {loading ? (

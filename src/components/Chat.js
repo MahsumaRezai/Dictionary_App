@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Footer.css";
 
-const Chats = () => {
+const Chats = (props) => {
     const [searchHistory, setSearchHistory] = useState([]);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ const Chats = () => {
             ) : (
                     <p>No search history available.</p>
                 )}
-            <button>close</button>
+            <button className="btn" onClick={props.onClose}>close</button>
         </div>
     );
 };
