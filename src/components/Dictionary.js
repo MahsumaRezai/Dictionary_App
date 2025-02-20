@@ -8,7 +8,6 @@ const Dictionary = ({ defaultKeyword }) => {
   const [keyword, setKeyword] = useState(defaultKeyword);
   const [results, setResults] = useState(null);
   const [photos, setPhotos] = useState(null);
-  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const search = () => {
@@ -16,6 +15,7 @@ const Dictionary = ({ defaultKeyword }) => {
       const pexelsApiKey = process.env.REACT_APP_PEXELS_API_KEY;
       const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
       const pexelsApiHeaders = { Authorization: pexelsApiKey };
+
       fetch(dictionaryApiUrl)
         .then((response) => response.json())
         .then(handleDictionaryResponse)
@@ -31,11 +31,16 @@ const Dictionary = ({ defaultKeyword }) => {
         });
     };
 
-    if (!loaded) {
+    if (keyword) {
       search();
-      setLoaded(true);
+      // ذخیره‌سازی لغت جستجو شده در localStorage
+      const searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
+      if (!searchHistory.includes(keyword)) {
+        searchHistory.push(keyword);
+        localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+      }
     }
-  }, [keyword, loaded]);
+  }, [keyword]);
 
   const handlePexelsResponse = (data) => {
     setPhotos(data.photos);
@@ -51,7 +56,7 @@ const Dictionary = ({ defaultKeyword }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setLoaded(false);
+    setKeyword(event.target.keyword.value);
   };
 
   return (
@@ -68,8 +73,6 @@ const Dictionary = ({ defaultKeyword }) => {
           />
           <input type="submit" value="Search" className="search-button" />
         </form>
-        <div className="suggestions">
-        </div>
       </section>
       {results && <Results results={results} />}
       {photos && <Photos photos={photos} />}

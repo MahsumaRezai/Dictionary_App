@@ -3,13 +3,20 @@ import Dictionary from "./components/Dictionary";
 import Footer from "./components/Footer";
 import LoadingSpinner from "./components/LoadingSpinner";
 import "./App.css";
+import Chats from "./components/Chat";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [loading, setLoading] = useState(true);
+  const [isCart, setIsCart] = useState(false);
+
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
+
+  const hanlderCart = () => {
+    setIsCart(true)
+  }
 
   useEffect(() => {
     setTimeout(() => {
@@ -25,7 +32,8 @@ function App() {
           <button className="toggle-button" onClick={toggleDarkMode}>
             {isDarkMode ? "Light Mode" : "Dark Mode"}
           </button>
-          <button className="hello-button">hello</button>
+          {isCart && <Chats />}
+          <button className="hello-button" onClick={hanlderCart}>Chats</button>
         </header>
         <main>
           {loading ? (

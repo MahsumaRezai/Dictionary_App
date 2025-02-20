@@ -5,8 +5,27 @@
     margin: 5px 0;
     color: var(--text-color);
   }
-   .chat {
-     width: 200px;
-     height: 20px;
-     background: red;
-   }
+  .Chats {
+    padding: 20px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  p {
+    font-style: italic;
+    color: #888;
+  }
+  
