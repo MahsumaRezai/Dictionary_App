@@ -5,15 +5,14 @@ const Footer = (props) => {
             <footer className="mt-5 footer">
                 <div className="footer-content">
                     <p className="credit">
-                        Coded by{" "}
+                    {" "}
                         <a
                             href="https://github.com/MahsumaRezai"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="footer-link"
                         >
-                            Masoumeh Nowrozi
-              </a>
+                          Designed and Developed by Masoumeh Nowrozi              </a>
                         {" "}
                         <a
                             href="https://github.com/MahsumaRezai/Dictionary_App"
