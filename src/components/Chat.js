@@ -17,7 +17,7 @@ const Chats = (props) => {
     return (
         <Modal onClose={props.onClose}>
             <div className="Chats">
-                <h2>Search History</h2>
+                <h2 className="text">Search History</h2>
                 {searchHistory.length > 0 ? (
                     <ul>
                         {searchHistory.map((word, index) => (
