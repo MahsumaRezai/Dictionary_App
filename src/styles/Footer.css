@@ -1,76 +1,130 @@
-
 .App footer {
-    font-size: 1rem;
-    font-weight: 500;
-    margin: 5px 0;
-    color: black;
-  }
-  .Chats {
-    padding: 20px;
-    max-width: 900px;
-    margin: 0 auto;
-    margin-bottom: 25px;
-    padding: 20px;
-    border-radius: 30px;
-    outline-offset: -10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-   outline: 2px solid gainsboro;
-   background-color: ghostwhite;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 5px 0;
+  color: black;
+}
 
+.Chats {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 20px;
+  border-radius: 30px;
+  outline-offset: -10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  outline: 2px solid gainsboro;
+  background-color: ghostwhite;
+}
 
-  }
-  .button {
-    display: flex;
-    gap:20px;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center
-  }
-  
-  h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    text-align: center
-  }
-  
-  ul {
-    list-style-type: none;
-    padding-left: 0;
-    font-size:18px;
-    font-weight: bold
-    
-  }
-  
-  li {
-    padding: 5px 0;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  p {
-    font-style: italic;
-    color: #004792;
-  }
-  .btn-remve  {
+.button {
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+li {
+  padding: 5px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+p {
+  font-style: italic;
+  color: #004792;
+}
+
+.btn-remove {
   padding: 10px 30px;
   font-size: 17px;
   cursor: pointer;
-  background-color:darkred;
+  background-color: darkred;
   color: white;
   border: none;
   border-radius: 5px;
- 
-  }
-  .btn {
-   padding: 10px 30px;
+}
+
+.btn {
+  padding: 10px 30px;
   font-size: 17px;
   cursor: pointer;
-  background-color:#004792;
+  background-color: #004792;
   color: white;
   border: none;
   border-radius: 5px;
+}
+
+.footer-link {
+  color: #004792;
+}
+
+/* Media Query for mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .Chats {
+    padding: 15px;
+    max-width: 100%;
+    margin-bottom: 15px;
+    border-radius: 15px;
   }
-  .footer-link {
-    color: #004792
+
+  .button {
+    flex-direction: column;
+    gap: 10px;
   }
-  
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  ul {
+    font-size: 16px;
+  }
+
+  .btn, .btn-remove {
+    padding: 8px 20px;
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Chats {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  ul {
+    font-size: 14px;
+  }
+
+  .btn, .btn-remove {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
