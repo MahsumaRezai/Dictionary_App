@@ -82,11 +82,11 @@ p {
     margin-bottom: 15px;
     border-radius: 15px;
   }
-
   .button {
     flex-direction: column;
     gap: 10px;
   }
+ 
 
   h2 {
     font-size: 1.2em;
