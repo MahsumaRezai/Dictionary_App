@@ -15,12 +15,12 @@ function App() {
   };
 
   const showHanlderCart = () => {
-    setIsCart(true)
-  }
+    setIsCart(true);
+  };
 
   const closeHanlderCart = () => {
-    setIsCart(false)
-  }
+    setIsCart(false);
+  };
 
   useEffect(() => {
     setTimeout(() => {
@@ -43,13 +43,12 @@ function App() {
           {loading ? (
             <LoadingSpinner />
           ) : (
-              <Dictionary defaultKeyword="aesthetic" />
-            )}
+            <Dictionary defaultKeyword="aesthetic" />
+          )}
         </main>
         <Footer />
       </div>
     </div>
   );
 }
-
 export default App;
