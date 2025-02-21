@@ -2,16 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background: rgba(255, 255, 255, 0.8);
+    background: white;
   }
   .spinner {
     border: 4px solid rgba(255, 255, 255, 0.3);
-    border-top: 4px solid #004792;
-    border-radius: 50%;
+    border-top: 5px solid #004792;
+    border-bottom: 5px solid #004792;
+    border-left: 5px solid #004792;
+    border-radius: 100%;
     width: 100px;
-    height: 70px;
-    animation: spin 2s linear infinite;
+    height: 100px;
+    animation: spin 4s linear infinite;
   }
   @keyframes spin {
     0% { transform: rotate(0deg); }
