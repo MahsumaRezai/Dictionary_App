@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Footer.css";
+import Modal from "./Modal";
 
 const Chats = (props) => {
     const [searchHistory, setSearchHistory] = useState([]);
@@ -9,27 +10,29 @@ const Chats = (props) => {
         setSearchHistory(history);
     }, []);
     const clearSearchHistory = () => {
-        localStorage.removeItem("searchHistory"); 
-        setSearchHistory([]); 
+        localStorage.removeItem("searchHistory");
+        setSearchHistory([]);
     };
 
     return (
-        <div className="Chats">
-            <h2>Search History</h2>
-            {searchHistory.length > 0 ? (
-                <ul>
-                    {searchHistory.map((word, index) => (
-                        <li key={index}>{word}</li>
-                    ))}
-                </ul>
-            ) : (
-                    <p>No search history available.</p>
-                )}
-            <div className="button">
-                <button className="btn" onClick={props.onClose}>Close</button>
-                <button className="btn-remve" onClick={clearSearchHistory}>Clear History</button>
+        <Modal onClose={props.onClose}>
+            <div className="Chats">
+                <h2>Search History</h2>
+                {searchHistory.length > 0 ? (
+                    <ul>
+                        {searchHistory.map((word, index) => (
+                            <li key={index}>{word}</li>
+                        ))}
+                    </ul>
+                ) : (
+                        <p>No search history available.</p>
+                    )}
+                <div className="button">
+                    <button className="btn" onClick={props.onClose}>Close</button>
+                    <button className="btn-remve" onClick={clearSearchHistory}>Clear History</button>
+                </div>
             </div>
-        </div>
+        </Modal>
     );
 };
 
